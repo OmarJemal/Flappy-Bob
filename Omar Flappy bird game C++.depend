@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1545788251 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.cpp
+	"allegro_utility_object.h"
+
+1545791596 c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.h
+	<allegro5/allegro5.h>
+
+1546835718 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro demo.cpp
+	<stdlib.h>
+	<stdio.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	"gameobject.h"
+
+1546824688 c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+
+1546836415 source:c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.cpp
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<stdio.h>
+	"gameobject.h"
+
