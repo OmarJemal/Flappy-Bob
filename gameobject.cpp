@@ -3,12 +3,27 @@
 #include <allegro5/allegro_image.h>
 #include <stdio.h>
 #include "gameobject.h"
-GameObject::GameObject(int PosX,int PosY,const char *filename)
+GameObject::GameObject(int PosX,int PosY,int width, int height, int velX, int velY, const char *filename)
 {
-al_init();
+    al_init();
+    if(!al_init()) {
+        printf("failed to initialize allegro!\n");
+    }
+
     al_init_image_addon();
+    if(!al_init_image_addon()) {
+        printf("failed to initialize allegro image addon!\n");
+    }
+
     PositionX = PosX;
     PositionY = PosY;
+    Width = width;
+    Height = height;
+    RelativeX = PosX + width;
+    RelativeY = PosY + height;
+    velocityX = velX;
+    velocityY = velY;
+
     object = al_load_bitmap(filename);
 
     if(!object){
@@ -23,20 +38,20 @@ al_init();
 GameObject::~GameObject()
 {
    //dtor
-printf("destructor called");
+printf("there");
     al_destroy_bitmap(object);
 
 }
 
 
 
-GameObject::getXposition(){
+float GameObject::getXposition(){
 
 return PositionX;
 
 }
 
-GameObject::getYposition(){
+float GameObject::getYposition(){
 
 return PositionY;
 
@@ -44,9 +59,43 @@ return PositionY;
 
 void GameObject::draw(){
 
-//al_init_image_addon();
+al_init_image_addon();
 al_convert_mask_to_alpha(object, al_map_rgb(255,0,255));
 al_draw_bitmap(object,PositionY,PositionX,0);
 
-//printf("HIII");
+
 }
+
+
+bool GameObject::offScreen(){
+
+if(PositionX < 0 || RelativeX > 640 || PositionY < 0 || RelativeY > 480){
+    return true;
+}
+else{
+    return false;
+}
+
+}
+
+void GameObject::setVelocityX(int velX){
+
+velocityX = velX;
+}
+
+void GameObject::setVelocityY(int velY){
+
+velocityY = velY;
+}
+
+float GameObject::getRelativeX(){
+return RelativeX;
+
+}
+
+float GameObject::getRelativeY(){
+
+return RelativeY;
+}
+
+

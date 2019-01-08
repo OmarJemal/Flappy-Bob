@@ -1,24 +1,36 @@
 # depslib dependency file v1.0
-1545788251 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.cpp
+1546919507 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.cpp
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
 	"allegro_utility_object.h"
+	<stdio.h>
 
-1545791596 c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.h
+1546919493 c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.h
 	<allegro5/allegro5.h>
 
-1546835718 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro demo.cpp
+1546926695 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro demo.cpp
 	<stdlib.h>
 	<stdio.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	"gameobject.h"
+	"allegro_utility_object.h"
+	"character.h"
 
-1546824688 c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.h
+1546924770 c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 
-1546836415 source:c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.cpp
+1546926767 source:c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.cpp
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<stdio.h>
+	"gameobject.h"
+
+1546926598 source:c:\users\omar\documents\c++\omar flappy bird game c++\character.cpp
+	"character.h"
+	<stdio.h>
+
+1546923632 c:\users\omar\documents\c++\omar flappy bird game c++\character.h
 	"gameobject.h"
 

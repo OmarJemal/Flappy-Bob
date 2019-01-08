@@ -32,12 +32,10 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Allegro demo.cpp" />
-		<Unit filename="allegro_utility_object.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="allegro_utility_object.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="allegro_utility_object.cpp" />
+		<Unit filename="allegro_utility_object.h" />
+		<Unit filename="character.cpp" />
+		<Unit filename="character.h" />
 		<Unit filename="gameobject.cpp" />
 		<Unit filename="gameobject.h" />
 		<Extensions>

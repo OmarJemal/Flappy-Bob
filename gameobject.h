@@ -7,26 +7,36 @@ class GameObject
 {
     public:
 
-        GameObject(int PosX,int PosY,const char *filename);
+        GameObject(int PosX,int PosY,int width, int height,int velX, int velY, const char *filename);
         virtual ~GameObject();
-        int getYposition();
-        int getXposition();
+        float getYposition();
+        float getXposition();
+        float getRelativeX();
+        float getRelativeY();
   //      bool isCollided();
-  //      void falling();
-  //      void jump();
+
         void draw();
+        bool offScreen();
+        void setVelocityX(int velX);
+        void setVelocityY(int velY);
 
     protected:
-
-    private:
+        float velocityX;
+        float velocityY;
+        float PositionX;
+        float PositionY;
         ALLEGRO_BITMAP *object = NULL;
-        int PositionX;
-        int PositionY;
-        int velocityX;
-        int velocityY;
-        int RelativeX;
-        int RelativeY;
+        float RelativeX;
+        float RelativeY;
+        float Width;
+        float Height;
+    private:
+
+
+
+
 
 };
+
 
 #endif // GAMEOBJECT_H
