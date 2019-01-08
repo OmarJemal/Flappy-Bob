@@ -38,6 +38,8 @@
 		<Unit filename="character.h" />
 		<Unit filename="gameobject.cpp" />
 		<Unit filename="gameobject.h" />
+		<Unit filename="obstacle.cpp" />
+		<Unit filename="obstacle.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

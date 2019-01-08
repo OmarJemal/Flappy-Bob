@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-character::character(int PosX,int PosY,int width, int height,int velX, int velY, const char *filename): GameObject(PosX,PosY,width,height, velX,  velY,filename)
+character::character(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename): GameObject(PosX,PosY,width,height, velX,  velY,filename)
 {
  printf("constructed");
  isFalling = true;
@@ -26,7 +26,7 @@ void character::draw(){
 
     }else if(isJumping){
         PositionY += velocityY;
-        velocityY += -0.05;
+       // velocityY += -0.05;
     }
 
    RelativeY = PositionY + Height;
@@ -40,7 +40,7 @@ void character::Falling(){
 
 isJumping = false;
 isFalling = true;
-velocityY = 0.4;
+//velocityY = 2;
 }
 
 void character::Jump(){
@@ -49,5 +49,5 @@ void character::Jump(){
 
 isFalling = false;
 isJumping = true;
-velocityY= -2.9;
+velocityY= -2;
 }

@@ -16,6 +16,10 @@ Allegro_Utility_Object::Allegro_Utility_Object( int Width,int Height)
         printf( "failed to create display!\n");
     }
 
+     if(!al_install_keyboard()) {
+          printf( "failed to initialize the keyboard!\n");
+
+       }
 
     timer = al_create_timer(1.0 / 60);
     if(!timer) {
@@ -31,6 +35,8 @@ Allegro_Utility_Object::Allegro_Utility_Object( int Width,int Height)
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue,al_get_timer_event_source(timer));
+    al_register_event_source(event_queue, al_get_keyboard_event_source());
+
     al_start_timer(timer);
 }
 

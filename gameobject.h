@@ -7,7 +7,7 @@ class GameObject
 {
     public:
 
-        GameObject(int PosX,int PosY,int width, int height,int velX, int velY, const char *filename);
+        GameObject(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename);
         virtual ~GameObject();
         float getYposition();
         float getXposition();

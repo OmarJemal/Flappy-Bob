@@ -7,7 +7,7 @@
 class character : public GameObject
 {
     public:
-        character(int PosX,int PosY,int width, int height,int velX, int velY, const char *filename);
+        character(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename);
 
         virtual ~character();
         void draw();

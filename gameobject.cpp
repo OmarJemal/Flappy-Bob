@@ -3,7 +3,7 @@
 #include <allegro5/allegro_image.h>
 #include <stdio.h>
 #include "gameobject.h"
-GameObject::GameObject(int PosX,int PosY,int width, int height, int velX, int velY, const char *filename)
+GameObject::GameObject(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename)
 {
     al_init();
     if(!al_init()) {
@@ -38,7 +38,7 @@ GameObject::GameObject(int PosX,int PosY,int width, int height, int velX, int ve
 GameObject::~GameObject()
 {
    //dtor
-printf("there");
+printf("deleted\n");
     al_destroy_bitmap(object);
 
 }
