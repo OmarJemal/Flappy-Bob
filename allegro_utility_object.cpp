@@ -16,6 +16,8 @@ Allegro_Utility_Object::Allegro_Utility_Object( int Width,int Height)
         printf( "failed to create display!\n");
     }
 
+    al_set_window_title(display, "Bob's Bizzare Adventure");
+
      if(!al_install_keyboard()) {
           printf( "failed to initialize the keyboard!\n");
 
@@ -64,5 +66,11 @@ void Allegro_Utility_Object::update(){
 ALLEGRO_EVENT_QUEUE* Allegro_Utility_Object::getEventQueue(){
 
 return event_queue;
+
+}
+
+float Allegro_Utility_Object::getTime(){
+
+return al_get_time();
 
 }

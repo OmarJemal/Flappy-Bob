@@ -13,6 +13,8 @@ class character : public GameObject
         void draw();
         void Falling();
         void Jump();
+        void setPosX(float PosX);
+        void setPosY(float PosY);
 
     protected:
         bool isFalling;

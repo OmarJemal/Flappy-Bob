@@ -16,8 +16,9 @@ obstacle::~obstacle()
 
 void obstacle::draw(){
 
+    al_convert_mask_to_alpha(object,al_map_rgb(255,0,255));
     al_draw_bitmap(object,PositionX,PositionY,0);
-    PositionX -= 4;
+    PositionX -= velocityX;
     RelativeX = PositionX + Width;
 
    // if(checkOffScreen()){
@@ -35,7 +36,7 @@ bool obstacle::checkOffScreen(){
 
     if(PositionX < 0){
         isOff = true;
-        printf("Yes");
+       // printf("Yes");
     }
     else{
         isOff = false;
@@ -63,4 +64,16 @@ bool obstacle::isColliding(character *player){
     }
 
 return isOverLapping;
+}
+
+void obstacle::setPosX(float PosX){
+PositionX = PosX;
+RelativeX = PositionX + Width;
+
+}
+
+void obstacle::setPosY(float PosY){
+PositionY = PosY;
+RelativeY = PositionY + Height;
+
 }

@@ -10,6 +10,12 @@ class Boss : protected character
         void Entering();
         void Exiting();
         void draw();
+        float getYposition();
+        float getXposition();
+        float getRelativeX();
+        float getRelativeY();
+        void setPosX(float PosX);
+        void setPosY(float PosY);
 
     protected:
 

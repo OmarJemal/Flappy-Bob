@@ -12,6 +12,7 @@ class Allegro_Utility_Object
     //    void showMenu();
    //     void showPopup();
         void setDisplay();
+        float getTime();
         ALLEGRO_EVENT_QUEUE* getEventQueue();
 
     protected:

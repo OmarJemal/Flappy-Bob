@@ -11,9 +11,11 @@ class obstacle : public GameObject
         virtual ~obstacle();
         void draw();
         void reset();
-        void collision();
+      //  void collision();
         bool checkOffScreen();
         bool isColliding(character *player);
+        void setPosX(float posX);
+        void setPosY(float posY);
 
     protected:
 

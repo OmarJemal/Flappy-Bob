@@ -83,3 +83,38 @@ void Boss::Entering(){
 void Boss::Exiting(){
     isExiting = true;
 }
+
+
+float Boss::getXposition(){
+
+return PositionX;
+
+}
+
+float Boss::getYposition(){
+
+return PositionY;
+
+}
+
+
+float Boss::getRelativeX(){
+return RelativeX;
+
+}
+
+float Boss::getRelativeY(){
+
+return RelativeY;
+}
+
+void Boss::setPosX(float PosX){
+PositionX = PosX;
+RelativeX = PositionX + Width;
+}
+
+void Boss::setPosY(float PosY){
+PositionY = PosY;
+RelativeY = PositionY + Height;
+}
+

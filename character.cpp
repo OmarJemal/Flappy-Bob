@@ -5,7 +5,7 @@
 
 character::character(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename): GameObject(PosX,PosY,width,height, velX,  velY,filename)
 {
- printf("constructed");
+ //printf("constructed");
  isFalling = true;
  isJumping = false;
  distance = 4.0;
@@ -30,7 +30,7 @@ void character::draw(){
     }else if(isJumping){
         distance += 0.1;
         PositionY += int((sin(distance) + cos(distance)) * 8);
-
+        //borrowed the jumping mechanism from an online tutorial about mario jumping mechanics
          velocityY = 0.8;
         if(distance >= 5.5){
           //  distance = 4.0;
@@ -63,4 +63,14 @@ void character::Jump(){
 isFalling = false;
 isJumping = true;
 //velocityY= -2;
+}
+
+void character::setPosX(float PosX){
+PositionX = PosX;
+RelativeX = PositionX + Width;
+}
+
+void character::setPosY(float PosY){
+PositionY = PosY;
+RelativeY = PositionY + Height;
 }

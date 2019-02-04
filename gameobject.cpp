@@ -38,7 +38,7 @@ GameObject::GameObject(float PosX,float PosY,float width, float height,float vel
 GameObject::~GameObject()
 {
    //dtor
-printf("deleted\n");
+//printf("deleted\n");
     al_destroy_bitmap(object);
 
 }
