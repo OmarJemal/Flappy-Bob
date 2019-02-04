@@ -1,8 +1,11 @@
 #include "obstacle.h"
 #include "gameobject.h"
 #include "character.h"
+#include <stdio.h>
 obstacle::obstacle(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename): GameObject(PosX,PosY,width,height, velX,  velY,filename)
 {
+
+
 
 }
 
@@ -15,10 +18,11 @@ void obstacle::draw(){
 
     al_draw_bitmap(object,PositionX,PositionY,0);
     PositionX -= 4;
+    RelativeX = PositionX + Width;
 
-    if(checkOffScreen()){
-            reset();
-        }
+   // if(checkOffScreen()){
+     //       reset();
+     //   }
 
 }
 
@@ -27,13 +31,17 @@ PositionX=620;
 }
 
 bool obstacle::checkOffScreen(){
+    bool isOff = false;
+
     if(PositionX < 0){
-        return true;
+        isOff = true;
+        printf("Yes");
     }
     else{
-
-        return false;
+        isOff = false;
     }
+
+    return isOff;
 }
 
 bool obstacle::isColliding(character *player){

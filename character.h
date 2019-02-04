@@ -17,6 +17,7 @@ class character : public GameObject
     protected:
         bool isFalling;
         bool isJumping;
+        float distance;
     private:
 
 };

@@ -1,5 +1,6 @@
 #include "character.h"
 #include <stdio.h>
+#include <math.h>
 
 
 character::character(float PosX,float PosY,float width, float height,float velX, float velY, const char *filename): GameObject(PosX,PosY,width,height, velX,  velY,filename)
@@ -7,6 +8,7 @@ character::character(float PosX,float PosY,float width, float height,float velX,
  printf("constructed");
  isFalling = true;
  isJumping = false;
+ distance = 4.0;
     //ctor
 }
 
@@ -22,10 +24,21 @@ void character::draw(){
     if(isFalling){
         PositionY += velocityY;
         velocityY += 0.05;
+        distance = 4.0;
 
 
     }else if(isJumping){
-        PositionY += velocityY;
+        distance += 0.1;
+        PositionY += int((sin(distance) + cos(distance)) * 8);
+
+         velocityY = 0.8;
+        if(distance >= 5.5){
+          //  distance = 4.0;
+            Falling();
+
+        }
+
+       // PositionY += velocityY;
        // velocityY += -0.05;
     }
 
@@ -49,5 +62,5 @@ void character::Jump(){
 
 isFalling = false;
 isJumping = true;
-velocityY= -2;
+//velocityY= -2;
 }

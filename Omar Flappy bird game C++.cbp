@@ -34,6 +34,8 @@
 		<Unit filename="Allegro demo.cpp" />
 		<Unit filename="allegro_utility_object.cpp" />
 		<Unit filename="allegro_utility_object.h" />
+		<Unit filename="boss.cpp" />
+		<Unit filename="boss.h" />
 		<Unit filename="character.cpp" />
 		<Unit filename="character.h" />
 		<Unit filename="gameobject.cpp" />

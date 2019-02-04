@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1546985417 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.cpp
+1547186089 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.cpp
 	<allegro5/allegro.h>
 	<allegro5/allegro_native_dialog.h>
 	"allegro_utility_object.h"
@@ -8,39 +8,56 @@
 1546919493 c:\users\omar\documents\c++\omar flappy bird game c++\allegro_utility_object.h
 	<allegro5/allegro5.h>
 
-1546986603 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro demo.cpp
+1549262687 source:c:\users\omar\documents\c++\omar flappy bird game c++\allegro demo.cpp
 	<stdlib.h>
 	<stdio.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
 	"gameobject.h"
 	"allegro_utility_object.h"
 	"character.h"
 	"obstacle.h"
+	"boss.h"
+	<math.h>
 
-1546983865 c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.h
+1549259640 c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 
-1546984164 source:c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.cpp
+1549259640 source:c:\users\omar\documents\c++\omar flappy bird game c++\gameobject.cpp
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<stdio.h>
 	"gameobject.h"
 
-1546986373 source:c:\users\omar\documents\c++\omar flappy bird game c++\character.cpp
+1549259640 source:c:\users\omar\documents\c++\omar flappy bird game c++\character.cpp
 	"character.h"
 	<stdio.h>
+	<math.h>
 
-1546983866 c:\users\omar\documents\c++\omar flappy bird game c++\character.h
+1549259640 c:\users\omar\documents\c++\omar flappy bird game c++\character.h
 	"gameobject.h"
 
-1546986603 source:c:\users\omar\documents\c++\omar flappy bird game c++\obstacle.cpp
+1549260948 source:c:\users\omar\documents\c++\omar flappy bird game c++\obstacle.cpp
 	"obstacle.h"
 	"gameobject.h"
 	"character.h"
+	<stdio.h>
 
-1546986603 c:\users\omar\documents\c++\omar flappy bird game c++\obstacle.h
+1549259640 c:\users\omar\documents\c++\omar flappy bird game c++\obstacle.h
 	"gameobject.h"
+	"character.h"
+
+1549263429 source:c:\users\omar\documents\c++\omar flappy bird game c++\boss.cpp
+	<stdio.h>
+	<math.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	"character.h"
+	"boss.h"
+
+1549259640 c:\users\omar\documents\c++\omar flappy bird game c++\boss.h
 	"character.h"
 
